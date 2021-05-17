@@ -1,12 +1,16 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <todo-header></todo-header>
     <router-view />
   </div>
 </template>
+
+<script>
+import TodoHeader from "@/components/TodoHeader.vue";
+export default {
+  components: { TodoHeader },
+};
+</script>
 
 <style>
 #app {
@@ -28,5 +32,20 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+body {
+  text-align: center;
+  background-color: #f6f6f8;
+}
+input {
+  border-style: groove;
+  width: 200px;
+}
+button {
+  border-style: groove;
+}
+.shadow {
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.03);
 }
 </style>
